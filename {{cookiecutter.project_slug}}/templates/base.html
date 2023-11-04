@@ -1,3 +1,4 @@
+{% raw %}
 {% load static wagtailcore_tags wagtailuserbar tailwind_tags favicon_tags wagtail_cache %}
 {% wagtailpagecache 86400 "home" %}
 <!DOCTYPE html>
@@ -77,7 +78,7 @@
         {% endblock modal %}
 
         {# Global javascript #}
-        {% comment %} <script type="text/javascript" src="{% static 'js/pozosscz.js' %}"></script> {% endcomment %}
+        {% comment %} <script type="text/javascript" src="{% static 'js/xxx.js' %}"></script> {% endcomment %}
         
         {% block inline_javascript %}
         <script type="text/javascript">
@@ -116,3 +117,4 @@
     </body>
 </html>
 {% endwagtailpagecache %}
+{% endraw %}

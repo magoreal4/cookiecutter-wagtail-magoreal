@@ -1,8 +1,8 @@
 
 module.exports = {
     content: [
-        '../../pozosscz/templates/**/*.html',
-        '../../pozosscz/templates/*.html',
+        '../../{{cookiecutter.project_slug}}/templates/**/*.html',
+        '../../{{cookiecutter.project_slug}}/templates/*.html',
         '../../**/templates/**/*.html',
         '!../../**/node_modules',
         '../../**/*.js',

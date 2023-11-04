@@ -1,6 +1,6 @@
 
+{% raw %}
 {% load menu_tags %}
-
 <ul class="flex flex-col space-y-2 md:space-y-0 md:flex-row text-base 2xl:text-xl justify-around ml-auto text-center md:bg-transparent md:h-full md:space-x-8 md:pr-5">
 {% for item in menu_items %}
     <li class="{{ item.active_class }}">
@@ -11,3 +11,4 @@
     </li>
 {% endfor %}
 </ul>
+{% endraw %}

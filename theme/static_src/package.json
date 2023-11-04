@@ -5,9 +5,9 @@
   "scripts": {
     "start": "npm run dev",
     "build": "npm run build:clean && npm run build:tailwind",
-    "build:clean": "rimraf ../../pozosscz/static/css/main.css",
-    "build:tailwind": "cross-env NODE_ENV=production tailwindcss --postcss -i ./src/main.css -o ../../pozosscz/static/css/main.css --minify",
-    "dev": "cross-env NODE_ENV=development tailwindcss --postcss -i ./src/main.css -o ../../pozosscz/static/css/main.css -w",
+    "build:clean": "rimraf ../../{{cookiecutter.project_slug}}/static/css/main.css",
+    "build:tailwind": "cross-env NODE_ENV=production tailwindcss --postcss -i ./src/main.css -o ../../{{cookiecutter.project_slug}}/static/css/main.css --minify",
+    "dev": "cross-env NODE_ENV=development tailwindcss --postcss -i ./src/main.css -o ../../{{cookiecutter.project_slug}}/static/css/main.css -w",
     "tailwindcss": "node ./node_modules/tailwindcss/lib/cli.js"
   },
   "keywords": [],

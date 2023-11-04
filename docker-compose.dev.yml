@@ -8,9 +8,9 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_DB=pozosscz
-      - POSTGRES_USER=gonzalo
-      - POSTGRES_PASSWORD=ojalaque
+      - POSTGRES_DB={{cookiecutter.project_slug}}
+      - POSTGRES_USER={{ cookiecutter.author_name.split(' ')[0] }}
+      - POSTGRES_PASSWORD={{ cookiecutter.password }}
     volumes:
       - postgres-data:/var/lib/postgresql/data/
 
@@ -19,8 +19,8 @@ services:
     image: dpage/pgadmin4
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: 'gonzalo@pozosscz.com'
-      PGADMIN_DEFAULT_PASSWORD: 'ojalaque'
+      PGADMIN_DEFAULT_EMAIL: 'magoreal4@gmail.com'
+      PGADMIN_DEFAULT_PASSWORD: '{{ cookiecutter.password }}'
     ports:
       - "5050:80"
 
