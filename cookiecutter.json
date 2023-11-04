@@ -1,13 +1,13 @@
 {
-    "project_name": "magoreal",
+    "project_name": "pozosscz",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "version": "0.1.0",
     "author_name": "Gonzalo Martinez",
     "github_username": "magoreal4",
     "email": "magoreal4@gmail.com",
-    "project_domain": "magoreal.com",
+    "project_domain": "pozosscz.com",
     "use_docker": "yes",
     "timezone": "UTC",
     "language_code": "es-bo",
-    "password": "xxx"
+    "password": "ojalaque"
 }

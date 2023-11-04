@@ -1,3 +1,4 @@
+{% raw %}
 {% if icon_image %}
     {% for icon in apple_icons %}
         <link rel="apple-touch-icon" sizes="{{ icon.size }}" href="{{ icon.url }}" />
@@ -21,4 +22,5 @@
     <link rel="manifest" href="/manifest.json" />
 {% endif %}
  {% endcomment %}
- 
+
+ {% endraw %}
