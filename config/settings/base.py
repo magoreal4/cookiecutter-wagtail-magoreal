@@ -146,9 +146,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "{{cookiecutter.language_code}}"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "{{cookiecutter.timezone}}"
 
 USE_I18N = True
 
@@ -190,7 +190,7 @@ WAGTAILSEARCH_BACKENDS = {
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-WAGTAILADMIN_BASE_URL = "https://{{cookiecutter.project_slug}}"
+WAGTAILADMIN_BASE_URL = "https://{{cookiecutter.project_domain}}"
 
 TAILWIND_APP_NAME = 'theme'
 TAILWIND_CSS_PATH = 'css/main.css'
