@@ -1,3 +1,3 @@
-python manage.py autopopulate_main_menus --add-home-links
+python manage.py main_menu
 
-docker compose -f docker-compose.dev.yml up
+docker compose -f docker-compose.dev.yml up -d
