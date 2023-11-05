@@ -30,7 +30,18 @@
             </button> <!-- Burguer -->
 
             <div id="navb" class="md:mb-6 overflow-hidden text-white font-light w-full h-0 transition-all ease-out duration-500 md:overflow-visible md:transition-none md:block md:w-auto">
-                {% main_menu apply_active_classes=True max_levels=1 template="menus/main_menu.html"  %}
+                {% get_menu 'Main' as main_menu %}
+                {% if main_menu %}
+                    <ul class="flex flex-col space-y-2 md:space-y-0 md:flex-row text-base 2xl:text-xl justify-around ml-auto text-center md:bg-transparent md:h-full md:space-x-8 md:pr-5">
+                        {% for item in main_menu.menu_items.all %}
+                        <li {% if request.path == item.link_page.url or request.path == item.link_url %} class="active"{% endif %}>
+                            <a href="{% if item.link_page %}{{ item.link_page.url }}{% else %}{{ item.link_url }}{% endif %}">
+                                {{ item.link_title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
             </div> <!-- Menu -->
         </div>
     </nav>

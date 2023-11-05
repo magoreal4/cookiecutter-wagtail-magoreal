@@ -57,12 +57,10 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'wagtailmetadata',
-    'wagtail_modeladmin',
-    'wagtailmenus',
-    # 'wagtailcache',
     
     'wanalytics',
     'wfavicon',
+    'wmenu',
 ]
 
 MIDDLEWARE = [
@@ -93,7 +91,6 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 
                 'wagtail.contrib.settings.context_processors.settings',
-                'wagtailmenus.context_processors.wagtailmenus',
             ],
         },
     },
@@ -206,13 +203,4 @@ CACHES = {
         }
     }
 }
-
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-#         'LOCATION': str(BASE_DIR / "cache"),
-#         'KEY_PREFIX': 'wagtailcache',
-#         'TIMEOUT': 3600, # one hour (in seconds)
-#     }
-# }
 

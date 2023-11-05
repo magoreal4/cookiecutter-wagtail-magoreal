@@ -7,8 +7,6 @@
 # ------------------------------------------------------------------------------
 wagtail>=5.2,<5.3  # https://github.com/wagtail/wagtail
 django-tailwind==3.6.0  # https://github.com/jazzband/django-tailwind
-wagtailmenus==3.1.9  # https://github.com/wagtail/wagtailmenus
-wagtail-modeladmin==1.0.0  # https://github.com/wagtail/wagtail-modeladmin
 wagtail-metadata==5.0.0 # https://github.com/neon-jungle/wagtail-metadata 
 
 # Django
