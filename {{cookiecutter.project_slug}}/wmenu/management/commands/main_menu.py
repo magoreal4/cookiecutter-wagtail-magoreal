@@ -3,7 +3,7 @@ from wagtail.models import Page
 from wmenu.models import Menu, MenuItem
 
 class Command(BaseCommand):
-    help = 'Auto-populates the main menu with available Wagtail pages.'
+    help = 'Auto-generates the main menu with available Wagtail pages.'
 
     def handle(self, *args, **options):
         # Borrar los menús y elementos de menú existentes si es necesario.

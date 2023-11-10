@@ -57,10 +57,19 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'wagtailmetadata',
+    'wagtailsvg',
+    "wagtail_modeladmin",
+    'generic_chooser',
+    'svg',
+    'captcha',
+    'wagtailcaptcha',
+    'crispy_forms',
+    'crispy_tailwind',
     
     'wanalytics',
     'wfavicon',
     'wmenu',
+    'wform',
 ]
 
 MIDDLEWARE = [
@@ -95,15 +104,6 @@ TEMPLATES = [
         },
     },
 ]
-
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-#         'LOCATION': os.path.join(PROJECT_DIR, 'cache'),
-#         'KEY_PREFIX': 'wagtailcache',
-#         'TIMEOUT': 3600, # one hour (in seconds)
-#     }
-# }
 
 
 # Database
@@ -204,3 +204,27 @@ CACHES = {
     }
 }
 
+WAGTAILIMAGES_EXTENSIONS = ["gif", "jpg", "jpeg", "png", "webp", "svg"]
+
+WAGTAILSVG_UPLOAD_FOLDER = 'svg'
+
+SVG_DIRS=[
+    os.path.join(APP_DIR, 'media/svg')
+]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+CRISPY_TEMPLATE_PACK = "tailwind"
+
+# DO NOT use on production, test key is available in the URL below
+# https://developers.google.com/recaptcha/docs/faq
+RECAPTCHA_PUBLIC_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+RECAPTCHA_PRIVATE_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
+NOCAPTCHA = True
+SILENCED_SYSTEM_CHECKS = ["captcha.recaptcha_test_key_error"]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'premium175.web-hosting.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'contacto@pozosscz.com'
+EMAIL_HOST_PASSWORD = 'ojalaquecontacto!?'
